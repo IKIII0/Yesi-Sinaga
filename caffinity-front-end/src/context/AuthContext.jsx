@@ -33,8 +33,8 @@ export const AuthProvider = ({ children }) => {
   // Login function
   const login = async (email, password) => {
     try {
-      // Simulasi API call (ganti dengan API asli Anda)
-      const response = await fetch('http://localhost:5000/api/auth/login', {
+      // Call backend API (deploy Vercel)
+      const response = await fetch('https://caffinity-be.vercel.app/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -72,7 +72,7 @@ export const AuthProvider = ({ children }) => {
   const register = async (userData) => {
     try {
       // Kirim data registrasi ke backend
-      const response = await fetch('http://localhost:5000/api/auth/register', {
+      const response = await fetch('https://caffinity-be.vercel.app/api/auth/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -107,7 +107,7 @@ export const AuthProvider = ({ children }) => {
   const updateProfile = async (updatedData) => {
     try {
       const token = localStorage.getItem('user_token');
-      const response = await fetch('http://localhost:5000/api/user/profile', {
+      const response = await fetch('https://caffinity-be.vercel.app/api/user/profile', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
