@@ -6,6 +6,7 @@ const corsOptions = {
     "http://localhost:5173",
     "https://caffinity-front-end.vercel.app",
     "https://caffinity-fe.vercel.app",
+    "https://caffinity-green.vercel.app",
   ],
   credentials: true,
 };
